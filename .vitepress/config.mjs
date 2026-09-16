@@ -45,9 +45,9 @@ export default defineConfig({
       {
         text: "Scratch",
         items: [
-          { text: "初级", link: "/project/web/vue/0.vue分类简介.md" },
-          { text: "中级", link: "/project/web/htmlAndCss/0.htmlAndCss分类简介.md" },
-          { text: "高级", link: "/project/web/JS/0.JS分类简介.md" },
+          { text: "初级", link: "/project/scratch/chuji/index.md" },
+          { text: "中级", link: "/project/scratch/zhongji/index.md" },
+          { text: "高级", link: "/project/scratch/gaoji/index.md" },
         ],
       },
       {
@@ -56,20 +56,13 @@ export default defineConfig({
           { text: "常用网站", link: "/project/daohang/index.md" },
         ],
       }, 
-      { text: "网站/插件推荐", link: "/project/website/0.网站推荐分类简介.md" }
+      { text: "网站/插件推荐", link: "/project/chajian/index.md" }
     ],
 
     sidebar: {
-      "/project/web/vue/": set_sidebar("/project/web/vue"),
-      "/project/web/htmlAndCss/": set_sidebar("/project/web/htmlAndCss"),
-      "/project/web/JS/": set_sidebar("/project/web/JS"),
-      "/project/web/React/": set_sidebar("/project/web/React"),
-      "/project/web/uniapp/": set_sidebar("/project/web/uniapp"),
-      "/project/web/weixinxcx/": set_sidebar("/project/web/weixinxcx"),
-      "/project/web/RN/": set_sidebar("/project/web/RN"),
-      "/project/java/JavaSE/": set_sidebar("/project/java/JavaSE"),
-      "/project/java/JavaWeb/": set_sidebar("/project/java/JavaWeb"),
-      "/project/java/SpringBoot/": set_sidebar("/project/java/SpringBoot"),
+      "/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
+      "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
+      "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
     },
 
     socialLinks: [

@@ -1,1 +1,0 @@
-import{_ as e,o as t,c as a}from"./chunks/framework.MEgWOu5s.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"project/chajian/index.md","filePath":"project/chajian/index.md"}'),n={name:"project/chajian/index.md"};function c(r,o,i,s,d,p){return t(),a("div")}const f=e(n,[["render",c]]);export{m as __pageData,f as default};

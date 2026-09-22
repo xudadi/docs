@@ -3,10 +3,11 @@ import { set_sidebar } from "../utils/index";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: '/vitepress/',
+  base: '/docs/',
   head: [["link", { rel: "icon", href: "/img.jpg" }]],
-  title: "少儿编程社团",
-  description: "A VitePress Site",
+  title: "编程社团",
+  //titleTemplate: ':title - 编程社团副标题',
+  description: "编程社团文档",
   themeConfig: {
     search: {
       provider: 'local',
@@ -43,7 +44,7 @@ export default defineConfig({
         text:"首页",link:'/'
       },
       {
-        text: "Scratch",
+        text: "Scratch教程",
         items: [
           { text: "初级", link: "/project/scratch/chuji/index.md" },
           { text: "中级", link: "/project/scratch/zhongji/index.md" },
@@ -56,7 +57,7 @@ export default defineConfig({
           { text: "常用网站", link: "/project/daohang/index.md" },
         ],
       }, 
-      { text: "网站/插件推荐", link: "/project/chajian/index.md" }
+      { text: "插件推荐", link: "/project/chajian/index.md" }
     ],
 
     sidebar: {

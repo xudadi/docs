@@ -60,11 +60,25 @@ export default defineConfig({
       { text: "插件推荐", link: "/project/chajian/index.md" }
     ],
 
-    sidebar: {
-      "/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
-      "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
-      "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
-    },
+sidebar: {
+  // 根路径的侧边栏
+  "/project/daohang/": [
+    {
+      text: '导航',
+      collapsed: false,
+      items: [
+        { text: '常用网站', link: '/index.md' },
+        { text: '常用网址', link: '/index.md' },
+        { text: '最新热门', link: '/index.md' }
+      ]
+    }
+  ],
+
+  "/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
+  "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
+  "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
+},
+
 
     socialLinks: [
       {

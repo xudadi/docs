@@ -6,7 +6,7 @@ hero:
   image: 
     src: /aiteacher.svg
     alt: '图片'
-  name: "少儿编程社团网站"
+  name: "少儿编程社团"
   text: "专注于Scratch编程"
   tagline: 创作故事，游戏和动画，与世界上的其他人分享
   actions:

@@ -41,6 +41,9 @@ export default defineConfig({
     logo: "/img.jpg",
     nav: [
       {
+        text: "主页", link: 'https://xudadi.cn'
+      },
+      {
         text: "首页", link: '/'
       },
       {

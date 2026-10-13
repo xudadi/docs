@@ -80,7 +80,7 @@ export default defineConfig({
               text: '中级教程',
               collapsed: true,
               items: [
-                { text: '乘法表', link: '/project/scratch/zhongji/2.乘法表' },
+                { text: '1.穿越障碍', link: '/project/scratch/zhongji/1.穿越障碍' },
               ]
             },
 

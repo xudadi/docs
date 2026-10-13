@@ -8,6 +8,7 @@ export default defineConfig({
   title: "编程社团",
   //titleTemplate: ':title - 编程社团副标题',
   description: "编程社团文档",
+  lang: 'zh-CN',
   themeConfig: {
     search: {
       provider: 'local',
@@ -35,94 +36,89 @@ export default defineConfig({
         },
       },
     },
+    // 强制覆盖文档底部「上一篇/下一篇」文案（不依赖 lang 是否生效）
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
+    },
     aside: "right",
-    outlineTitle: "文章标题",
-    outline: [1, 6],
+    // 2.0 alpha 的大纲标题/级别要用 outline 对象（label + level），不支持 outlineTitle
+    outline: {
+      label: '文章标题',
+      level: [1, 6]
+    },
     logo: "/img.jpg",
     nav: [
       {
         text: "首页", link: '/'
       },
       {
-        text: "Scratch教程", items: [
-          { text: '学习案例', link: '/project/scratch/chuji/study.md' },
-          { text: '常用网址', link: '/project/scratch/chuji/index.md' },
-          { text: '最新热门', link: '/project/scratch/chuji/index.md' }
-        ]
+        text: "Scratch编程", link: '/project/scratch/'
       },
       {
-        text: "网站导航", items: [
-          { text: "常用网站", link: "/project/daohang/index.md" },
-          { text: "常用网址", link: "/project/daohang/index.md" },
-          { text: "最新热门", link: "/project/daohang/index.md" }
-        ]
+        text: "网站导航", link: "/project/daohang/index"
       },
-      { text: "插件推荐", link: "/project/chajian/index.md" }
+      { text: "插件推荐", link: "/project/chajian/index" }
     ],
 
     sidebar: {
       // Scratch教程的侧边栏
-      "/project/scratch/study/": [
+      "/project/scratch/": [
         {
-          text: 'scratch初级教程',
+          text: 'scratch教程',
           collapsed: false,
           items: [
-            { text: '常用网站', link: '/project/scratch/chuji/1.认识Scratch.md' },
-            { text: '常用网址', link: '/project/scratch/chuji/2.乘法表.md' },
-            { text: '最新热门', link: '/project/scratch/chuji/index.md' }
+            {
+              text: '初级教程',
+              collapsed: true,
+              items: [
+                { text: '乘法表', link: '/project/scratch/chuji/2.乘法表' },
+              ]
+            },
+
+            {
+              text: '中级教程',
+              collapsed: true,
+              items: [
+                { text: '乘法表', link: '/project/scratch/zhongji/2.乘法表' },
+              ]
+            },
+
+            {
+              text: '高级教程',
+              collapsed: true,
+              items: [
+                { text: '乘法表', link: '/project/scratch/zhongji/index' },
+              ]
+            }
           ]
         },
+
         {
-          text: 'scratch中级教程',
+          text: 'scratch比赛',
           collapsed: false,
           items: [
-            { text: '常用网站', link: '/index.md' },
-            { text: '常用网址', link: '/index.md' },
-            { text: '最新热门', link: '/index.md' }
+            {
+              text: '重庆市第七届编程比赛',
+              collapsed: false,
+              items: [
+                { text: '1.活动背景介绍', link: '/project/bisai/1.活动背景介绍' },
+                { text: '2.编程比赛相关信息', link: '/project/bisai/2.编程比赛相关信息' },
+                { text: '3.编程比赛报名指南', link: '/project/bisai/3.编程比赛报名指南' }
+              ]
+            },
+
+           
           ]
         },
-        {
-          text: 'scratch高级教程',
-          collapsed: false,
-          items: [
-            { text: '常用网站', link: '/index.md' },
-            { text: '常用网址', link: '/index.md' },
-            { text: '最新热门', link: '/index.md' }
-          ]
-        }
+
+
       ],
 
-      // 导航路径的侧边栏
-      "/project/daohang/": [
-        {
-          text: '常用网站',
-          collapsed: false,
-          items: [
-            { text: '文本工具', link: '/index.md' },
-            { text: '图片工具', link: '/index.md' },
-            { text: '音频工具', link: '/index.md' },
-            { text: '视频工具', link: '/index.md' }
-          ]
-        }
-      ],
-
-      // 导航路径的侧边栏
-      "/project/chajian/": [
-        {
-          text: '常用网站',
-          collapsed: false,
-          items: [
-            { text: '文本工具', link: '/index.md' },
-            { text: '图片工具', link: '/index.md' },
-            { text: '音频工具', link: '/index.md' },
-            { text: '视频工具', link: '/index.md' }
-          ]
-        }
-      ],
-
-      "/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
-      "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
-      "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
+      // 整页显示，不含侧边栏
+      //"/project/scratch/chuji/": set_sidebar("/project/scratch/chuji"),
+     // "/project/scratch/zhongji/": set_sidebar("/project/scratch/zhongji"),
+     // "/project/scratch/gaoji/": set_sidebar("/project/scratch/gaoji"),
     },
 
 
